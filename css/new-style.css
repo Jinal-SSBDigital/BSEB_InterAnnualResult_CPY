@@ -1,0 +1,98 @@
+html, body {
+    height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    background: url("../images/login-bg.jpg") no-repeat top center/cover fixed;
+    overflow: hidden;
+}
+.playfair-display{
+    font-family: "Playfair Display", serif;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+}
+
+.login {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+    .login .logo h1 {
+        font-weight: 600;
+        font-size: 24px;
+        color: #032D23;
+        margin: 15px 0;
+    }
+    .login .left-box, .login .right-box {
+        height: 500px;
+        width: 50%;
+        max-width: 496px;
+    }
+    .login .left-box {
+        background: #fff;
+        border-radius: 10px 0 0 10px;
+        padding: 20px;
+    }
+
+    .login .right-box {
+        background: #fff;
+        border-radius:0 10px 10px 0;
+        overflow:hidden;
+        position:relative;
+    }
+    .login .right-box::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(3, 45, 35, 0.2);
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:2;
+    }
+
+    .login .right-box img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+.login-form .form-control {
+    border-radius: 5px;
+    border: solid 2px #032D23;
+    line-height:40px;
+}
+.login-form .form-actions .btn {
+    background: #032D23;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.login-form .other-info {
+    color: #032D23;
+    text-align:right;
+}
+
+    .login-form .other-info a {
+        color: #032D23;
+    }
+
+.login-form .btn.blue {
+    background: #032D23;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    width: 120px;
+    line-height: 16px;
+    font-size: 16px;
+}

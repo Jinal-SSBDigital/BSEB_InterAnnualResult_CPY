@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0033)https://interbiharboard.com/test/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+        Bseb Result
+    </title>
+    <meta name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./default_files/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="./default_files/main.css" rel="stylesheet" media="screen" />
+    <link href="./default_files/new-style.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <!--onsubmit="javascript:return WebForm_OnSubmit();"-->
+    <form method="post" action="Result.aspx" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzU4MzIzMDY2ZGRW8tQXWVV81UJLmkDxCDveFR/GA/Ml/iVA7QLsA8NZaA==" />
+        </div>
+
+        <script type="text/javascript" async="" src="./default_files/analytics.js.download"></script>
+        <script type="text/javascript" async="" src="./default_files/js"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['form1'];
+            if (!theForm) {
+                theForm = document.form1;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+            //]]>
+        </script>
+
+
+        <script src="./default_files/WebResource.axd" type="text/javascript"></script>
+
+
+        <script src="./default_files/WebResource(1).axd" type="text/javascript"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            function WebForm_OnSubmit() {
+                if (typeof (ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+                return true;
+            }
+            //]]>
+            // Function to generate a random CAPTCHA
+            function generateCaptcha() {
+                let captcha = Math.floor(1000 + Math.random() * 9000); // Generate 4-digit random number
+                document.getElementById("generatedCaptcha").innerText = captcha;
+                document.getElementById("generatedCaptcha").dataset.value = captcha; // Store for validation
+            }
+
+            // Function to validate CAPTCHA before form submission
+            function validateCaptcha() {
+
+                let rc = document.getElementById("mobile").value;
+                let rn = document.getElementById("password").value;
+                let userCaptcha = document.getElementById("captchaInput").value;
+                let generatedCaptcha = document.getElementById("generatedCaptcha").dataset.value;
+
+                if (rc ==="") {
+                    document.getElementById("RequiredFieldValidator1").style.visibility = "visible";
+                    return false; // Prevent form submission
+                }
+                else if (rn === "") {
+                    document.getElementById("RequiredFieldValidator2").style.visibility = "visible";
+                    return false; // Prevent form submission
+                }
+                else if (userCaptcha === "") {
+                    document.getElementById("RequiredFieldValidator3").style.visibility = "visible";
+                    return false; // Prevent form submission
+                }
+                else if (userCaptcha !== generatedCaptcha) {
+                    document.getElementById("captchaError").style.visibility = "visible";
+                    return false; // Prevent form submission
+                } else {
+                    document.getElementById("captchaError").style.visibility = "hidden";
+                    return true;
+                }
+            }
+
+            // Attach validation to form submit event
+            document.getElementById("form1").onsubmit = function () {
+                return validateCaptcha();
+            };
+
+            // Generate CAPTCHA on page load
+            window.onload = function () {
+                generateCaptcha();
+            };
+        </script>
+
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="297DB184" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAS8vn+T6DXqVwmf5ns8lqgstqlIn+GhjYSB46TZvIEz9+4sciJO3Hoc68xTFtZGQEh0OWarNtHZvueomBCnXS0aPOUeFSCPQeyMWKGWNcRseOXzvc9/3YXyuwSnXVm4y5Y=" />
+        </div>
+        <div class="login">
+            <div class="left-box">
+                <div class="logo text-center">
+                    <img src="./default_files/bseorissa-logo-w.png" />
+                    <h1 class="playfair-display">Bihar School Examination Board</h1>
+                    <p>
+                        RESULT<br />
+                        INTERMEDIATE ANNUAL EXAMINATION-2026
+                    </p>
+                </div>
+                <div class="login-form">
+
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <input name="Rollcode" type="text" id="Rollcode" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Enter Roll Code" />
+                            <span id="RequiredFieldValidator1" style="color:Red;visibility:hidden;">*</span>
+                            <span id="Label1"></span>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <input name="Rollnumber" type="text" id="Rollnumber" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Enter Roll Number" />
+                            <span id="RequiredFieldValidator2" style="color:Red;visibility:hidden;">*</span>
+
+                        </div>
+                    </div>
+                    <div class="form-group cpta-box" style="text-align:center">
+                        <span id="generatedCaptcha" style="font-size: 18px; font-weight: bold; color: #0037FF;"></span>
+                        <button type="button" onclick="generateCaptcha()">Refresh</button>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <input type="text" id="captchaInput" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Enter CAPTCHA" />
+                            <span id="captchaError" style="color:Red;visibility:hidden;">Incorrect CAPTCHA</span>
+                            <span id="RequiredFieldValidator3" style="color:Red;visibility:hidden;">*</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <span id="lbl_msg" style="color:#0037FF;"></span>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+
+
+                        <!--<input type="submit" name="btn_login" value="View Result" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btn_login&quot;, &quot;&quot;, true, &quot;log&quot;, &quot;&quot;, false, false))" id="btn_login" class="btn" />-->
+
+                        <input type="button" value="View Result"
+                               id="btn_login" class="btn"
+                               onclick="submitWithQueryString();" />
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="right-box">
+                <img src="./default_files/img11.jpg" alt="" />
+            </div>
+        </div>
+    </form>
+
+
+    <script src="./default_files/jquery-1.11.2.min.js.download"></script>
+    <script src="./default_files/jquery.reslider.js.download"></script>
+    <script>
+        $(function () {
+            $('.jquery-reslider').reSlider({
+                speed: 1000,
+                delay: 5000,
+                imgCount: 4,
+                autoPlay: true
+            })
+        })
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script async="" src="./default_files/js(1)"></script>
+
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135470385-1');
+
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var Page_Validators = new Array(document.getElementById("RequiredFieldValidator1"), document.getElementById("RequiredFieldValidator2"));
+        //]]>
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var RequiredFieldValidator1 = document.all ? document.all["RequiredFieldValidator1"] : document.getElementById("RequiredFieldValidator1");
+        RequiredFieldValidator1.controltovalidate = "Rollcode";
+        RequiredFieldValidator1.errormessage = "Please Enter Roll Code";
+        RequiredFieldValidator1.validationGroup = "log";
+        RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        RequiredFieldValidator1.initialvalue = "";
+        var RequiredFieldValidator2 = document.all ? document.all["RequiredFieldValidator2"] : document.getElementById("RequiredFieldValidator2");
+        RequiredFieldValidator2.controltovalidate = "Rollnumber";
+        RequiredFieldValidator2.errormessage = "Please Enter Roll Number";
+        RequiredFieldValidator2.validationGroup = "log";
+        RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        RequiredFieldValidator2.initialvalue = "";
+        //]]>
+    </script>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+        var Page_ValidationActive = false;
+        if (typeof (ValidatorOnLoad) == "function") {
+            ValidatorOnLoad();
+        }
+
+        function ValidatorOnSubmit() {
+            if (Page_ValidationActive) {
+                return ValidatorCommonOnSubmit();
+            }
+            else {
+                return true;
+            }
+        }
+
+        function submitWithQueryString() {
+            debugger;
+            // Get values
+            let rollCode = document.getElementById("Rollcode").value.trim();
+            let rollNo = document.getElementById("Rollnumber").value.trim();
+            let userCaptcha = document.getElementById("captchaInput").value.trim();
+            let generatedCaptcha = document.getElementById("generatedCaptcha").dataset.value;
+
+            // Validations
+            if (rollCode === "") {
+                document.getElementById("RequiredFieldValidator1").style.visibility = "visible";
+                return;
+            }
+
+            if (rollNo === "") {
+                document.getElementById("RequiredFieldValidator2").style.visibility = "visible";
+                return;
+            }
+
+            if (userCaptcha === "") {
+                document.getElementById("RequiredFieldValidator3").style.visibility = "visible";
+                return;
+            }
+
+            if (userCaptcha !== generatedCaptcha) {
+                document.getElementById("captchaError").style.visibility = "visible";
+                return;
+            }
+
+            // Hide errors
+            document.getElementById("captchaError").style.visibility = "hidden";
+
+            // Build query string
+            let url = "InterResult.aspx"
+                + "?Rollcode=" + encodeURIComponent(rollCode)
+                + "&Rollnumber=" + encodeURIComponent(rollNo);
+
+            // Redirect
+            window.location.href = url;
+        }
+        //]]>
+    </script>
+
+
+
+    <script type="text/javascript">
+        function SetTarget() {
+            document.forms[0].target = "_blank";
+        }
+    </script>
+
+</body>
+</html>
