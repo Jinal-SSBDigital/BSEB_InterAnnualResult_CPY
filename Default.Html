@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Bseb Result</title>
+    <meta name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./default_files/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="./default_files/main.css" rel="stylesheet" media="screen" />
+    <link href="./default_files/new-style.css" rel="stylesheet" media="screen" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .left-box {
+            width: 360px;
+            max-width: 100%;
+        }
+
+        .right-box {
+            width: 500px;
+        }
+
+            .right-box img {
+                width: 100%;
+                height: auto;
+            }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+            .logo img {
+                width: 70px;
+            }
+
+            .logo h1 {
+                font-size: 18px;
+                margin: 5px 0;
+            }
+
+            .logo p {
+                font-size: 13px;
+                margin: 0;
+            }
+
+        .login-form {
+            padding: 20px;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .cpta-box {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        #generatedCaptcha {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0037FF;
+            letter-spacing: 3px;
+            padding: 8px 15px;
+            background: #e0eaff;
+            border-radius: 5px;
+            user-select: none;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .cpta-box button {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #000;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .cpta-box button:hover,
+            .cpta-box button:active,
+            .cpta-box button:focus {
+                background-color: #e0e0e0;
+                color: #000;
+                outline: none;
+            }
+
+        .form-actions {
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            display: block;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+        .error-input {
+            border: 2px solid red !important;
+        }
+
+        @media (max-width: 900px) {
+            .login {
+                padding: 15px;
+                flex-direction: column;
+            }
+
+            .container {
+                flex-direction: column !important;
+                height: auto !important;
+                max-height: 95vh;
+            }
+
+            .left-box {
+                width: 100% !important;
+                max-width: 450px !important;
+                border-radius: 20px !important;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+                margin-bottom: 0 !important;
+                padding: 40px 30px !important;
+            }
+
+            .right-box {
+                display: none !important;
+            }
+
+            .form-control {
+                height: 46px;
+                padding: 0 14px;
+                font-size: 15px;
+            }
+
+            #generatedCaptcha {
+                font-size: 22px;
+                padding: 10px 16px;
+                margin-bottom: 10px;
+                display: block;
+                width: 100%;
+                max-width: 220px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cpta-box button {
+                width: 100%;
+                max-width: 140px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .btn {
+                height: 48px;
+                font-size: 15px;
+            }
+
+            .logo h1 {
+                font-size: 20px;
+            }
+
+            .logo p {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .login {
+                padding: 10px;
+            }
+
+            .left-box {
+                padding: 30px 20px !important;
+                border-radius: 16px !important;
+            }
+
+            .logo {
+                margin-bottom: 25px;
+            }
+
+                .logo img {
+                    width: 60px;
+                }
+
+            .form-group {
+                margin-bottom: 16px;
+            }
+
+            .cpta-box {
+                padding: 16px;
+                margin-bottom: 16px;
+            }
+        }
+
+        @media (max-height: 500px) and (orientation: landscape) {
+            .login {
+                padding: 10px;
+                align-items: stretch;
+            }
+
+            .left-box {
+                padding: 30px 25px !important;
+            }
+
+            .logo {
+                margin-bottom: 20px;
+            }
+
+                .logo h1 {
+                    font-size: 18px;
+                }
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+        NOTE: DB call / form POST to Result.aspx is DISABLED.
+        The form no longer submits to the server.
+        Instead, on "View Result" click, we construct the PDF filename
+        as: RollCode_{rollcode}RollNumber_{rollnumber}.pdf
+        and open it from the uploads/ folder directly in a new tab.
+    -->
+    <!-- Original ASP.NET form kept for structure but action is intercepted via JS -->
+    <form method="post" action="Result.aspx" id="form1">
+
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzU4MzIzMDY2ZGRW8tQXWVV81UJLmkDxCDveFR/GA/Ml/iVA7QLsA8NZaA==" />
+        </div>
+
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="297DB184" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAS8vn+T6DXqVwmf5ns8lqgstqlIn+GhjYSB46TZvIEz9+4sciJO3Hoc68xTFtZGQEh0OWarNtHZvueomBCnXS0aPOUeFSCPQeyMWKGWNcRseOXzvc9/3YXyuwSnXVm4y5Y=" />
+        </div>
+
+        <div class="login">
+            <div class="left-box">
+                <div class="logo text-center">
+                    <img src="./default_files/bseorissa-logo-w.png" />
+                    <h1 class="playfair-display">Bihar School Examination Board</h1>
+                    <p>
+                        RESULT<br />
+                        INTERMEDIATE ANNUAL EXAMINATION-2026
+                    </p>
+                </div>
+
+                <div class="login-form">
+
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <input name="mobile" type="text" id="mobile"
+                                   class="form-control placeholder-no-fix"
+                                   autocomplete="off" placeholder="Enter Roll Code" />
+                            <span id="RequiredFieldValidator1" style="color:Red;display:none;">Please Enter Roll Code</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <input name="password" type="text" id="password"
+                                   class="form-control placeholder-no-fix"
+                                   autocomplete="off" placeholder="Enter Roll Number" />
+                            <span id="RequiredFieldValidator2" style="color:Red;display:none;">Please Enter Roll Number</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group cpta-box" style="text-align:center">
+                        <span id="generatedCaptcha" style="font-size:18px;font-weight:bold;color:#0037FF;"></span>
+                        <button type="button" onclick="generateCaptcha()">Refresh</button>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <input type="text" id="captchaInput"
+                                   class="form-control placeholder-no-fix"
+                                   autocomplete="off" placeholder="Enter CAPTCHA" />
+                            <span id="captchaError" style="color:Red;display:none;">Incorrect CAPTCHA</span>
+                            <span id="RequiredFieldValidator3" style="color:Red;display:none;">Please Enter CAPTCHA</span>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <!-- type="button" prevents default form POST to Result.aspx -->
+                        <input type="button" name="btn_login" value="View Result"
+                               id="btn_login" class="btn"
+                               onclick="viewResult()" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="right-box">
+                <img src="./default_files/img11.jpg" alt="" />
+            </div>
+        </div>
+
+    </form>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="text/javascript">
+
+        // ------------------ CAPTCHA ------------------
+        function generateCaptcha() {
+            var captcha = Math.floor(1000 + Math.random() * 900000);
+            var capElement = document.getElementById("generatedCaptcha");
+            capElement.innerText = captcha;
+            capElement.dataset.value = captcha;
+        }
+
+        // ------------------ VALIDATION ------------------
+        function validateForm() {
+            var rc = document.getElementById("mobile");
+            var rn = document.getElementById("password");
+            var captcha = document.getElementById("captchaInput");
+
+            var userCaptcha = captcha.value.trim();
+            var generatedCaptcha = document.getElementById("generatedCaptcha").dataset.value;
+
+            var valid = true;
+
+            // Reset borders
+            [rc, rn, captcha].forEach(function (el) { el.classList.remove("error-input"); });
+
+            if (rc.value.trim() === "") {
+                rc.classList.add("error-input");
+                valid = false;
+            }
+            if (rn.value.trim() === "") {
+                rn.classList.add("error-input");
+                valid = false;
+            }
+            if (userCaptcha === "" || userCaptcha !== generatedCaptcha) {
+                captcha.classList.add("error-input");
+                valid = false;
+            }
+
+            return valid;
+        }
+
+        // ------------------ MAIN: VIEW RESULT ------------------
+        // DB call is COMMENTED OUT / DISABLED.
+        // Instead, construct PDF filename from RollCode + RollNumber
+        // and open from the uploads/ folder.
+        //
+        // PDF naming format: RollCode_{rollcode}RollNumber_{rollnumber}.pdf
+        // Example: RollCode_53045RollNumber_24130367.pdf
+        //
+        function viewResult() {
+            if (!validateForm()) {
+                return;
+            }
+
+            var rollCode = document.getElementById("mobile").value.trim();
+            var rollNumber = document.getElementById("password").value.trim();
+
+            // Construct PDF path from uploads folder
+            var pdfFileName = "RollCode_" + rollCode + "RollNumber_" + rollNumber + ".pdf";
+            var pdfPath = "uploads/" + pdfFileName;
+
+            // Attempt to open the PDF in a new tab
+            // If file doesn't exist, browser will show a 404 — we handle it gracefully below
+            var pdfWindow = window.open(pdfPath, "_blank");
+
+            // Fallback: if popup was blocked or we want to verify existence via fetch
+            if (!pdfWindow || pdfWindow.closed || typeof pdfWindow.closed === "undefined") {
+                Swal.fire({
+                    icon: "error",
+                    title: "Popup Blocked",
+                    text: "Please allow popups for this site and try again."
+                });
+                return;
+            }
+
+            // Optional: verify the PDF exists using fetch (works on same-origin servers)
+            // If you're running on a web server, uncomment this block for a nicer error message:
+            /*
+            fetch(pdfPath, { method: "HEAD" })
+                .then(function(response) {
+                    if (response.ok) {
+                        window.open(pdfPath, "_blank");
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Result Not Found",
+                            text: "No result found for Roll Code: " + rollCode + " and Roll Number: " + rollNumber
+                        });
+                    }
+                })
+                .catch(function() {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Error",
+                        text: "Unable to fetch result. Please try again later."
+                    });
+                });
+            */
+        }
+
+        // ------------------ LIVE VALIDATION RESET ------------------
+        function attachLiveValidation() {
+            var fields = ["mobile", "password", "captchaInput"];
+            fields.forEach(function (id) {
+                document.getElementById(id).addEventListener("input", function () {
+                    this.classList.remove("error-input");
+                });
+            });
+        }
+
+        // ------------------ PAGE LOAD ------------------
+        window.onload = function () {
+            generateCaptcha();
+            attachLiveValidation();
+        };
+
+    </script>
+
+    <script src="./default_files/jquery-1.11.2.min.js.download"></script>
+
+</body>
+</html>
